@@ -22,7 +22,16 @@
 </head>
 
 <body>
-
+    <p> $(function () {</p>
+    <p> $.ajax({</p>
+    <p> type: "post",</p>
+    <p> url: "http://120.79.172.103:8000/user/api/get_profile/",</p>
+    <p> data: "uid=7",</p>
+    <p> success: function (response) {</p>
+    <p> alert(response)</p>
+    <p> }</p>
+    <p> });</p>
+    <p> })</p>
 </body>
 
 </html>
