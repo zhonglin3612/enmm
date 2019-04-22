@@ -13,13 +13,14 @@
 
 <body>
     <div id="box">
+        叮 叮 叮 叮 叮 叮 叮 叮 叮 叮 ........
     </div>
 </body>
 <script type="text/babel">
     //列表渲染  name：显示名||html文件名&&显示名   url:html文件名
     function list(name,url) { 
         if(!url) url= name;
-        if(!name)url= name='###';
+        if(!name) url=name='###';
         return <li><a href={`/enmm/html/${url}.html`}>{name}</a></li>;
      };
 //+++++++分++++++++割++++++线++++++++++
