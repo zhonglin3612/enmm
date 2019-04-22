@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>目录</title>
-    <script src="/enmm/js/vue.js"></script>
+    <script src="enmm/js/react.js"></script>
+    <script src="enmm/js/react-dom.js"></script>
+    <script src="enmm/js/babel.js"></script>
 </head>
 
 <body>
-    <ul>
-        <li><a href="/enmm/html/map()%E6%96%B9%E6%B3%95.html">map()方法</a></li>
-    </ul>
+    <div id="box">
+    </div>
 </body>
+<script type="text/babel">
+    //列表渲染  name：显示名||html文件名&&显示名   url:html文件名
+    function list(name,url) { 
+        if(!url) url= name;
+        if(!name)url= name='###';
+        return <li><a href={`/enmm/html/${url}.html`}>{name}</a></li>;
+     };
+//+++++++分++++++++割++++++线++++++++++
+    ReactDOM.render(
+        //---------html---------------------------
+        <div>
+            <ul>
+                {list()}
+                {list('map()方法','map()')}
+            </ul>
+        </div>,
+        //---------el------------------------------
+        document.querySelector("#box"),
+        //---------渲染之后触发---------------------
+        ()=>{
+            console.log("mumu")
+        }
+        //-----------------------------------------
+    )
+</script>
 
 </html>
