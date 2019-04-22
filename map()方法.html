@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map()方法</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a = [],
+        b = [],
+        c = [];
+    let i = 0
+    const arr = [8, 4, 2, 5, 4, 6, 6, 0, 5];
+    var arr2 = arr.map(function (a1, b1, c1) {
+        a.push(a1)
+        b.push(b1)
+        c.push(c1)
+        return i--
+    });
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(arr2);
+</script>
+
+</html>
