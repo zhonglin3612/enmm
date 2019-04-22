@@ -1,0 +1,3 @@
+- 创建一个名为gh-pages的分支 
+- 必须含有index.html文件 
+- 输入网址访问https://你的名字.github.io/项目名字/index.html文件所在位置
