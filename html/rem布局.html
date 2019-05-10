@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>rem布局</title>
+    <script>
+        /*
+            rem 相对于根节点( HTML节点)的字体大小, 1 rem = 1 * HTML节点的字体大小
+            vw、vh 相对于可视窗口大小百分比，可视窗口为 100vw / 100vh
+        */
+        function remSize(fSize) {
+            /* 
+                参数：
+                    fSize: 开发的逻辑像素数值
+                利用rem自适应布局，自适应 HTML font-size ;
+            */
+
+            // console.log('当前html大小:',100 / 320 * document.documentElement.clientWidth)
+            // console.log('当前窗口大小:',document.documentElement.clientWidth)
+            document.documentElement.style.fontSize = 100 / fSize * document.documentElement.clientWidth + 'px'
+            window.onresize = function () {
+                // console.log('当前html大小:',100 / 320 * document.documentElement.clientWidth)
+                // console.log('当前窗口大小:',document.documentElement.clientWidth)
+                document.documentElement.style.fontSize = 100 / fSize * document.documentElement.clientWidth + 'px'
+            }
+        }
+        remSize(320)
+
+    </script>
+
+    <style>
+        html {
+            font-size: 112.5px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .navs {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            background: rgb(159, 252, 255);
+            overflow: hidden;
+        }
+
+        .item {
+            width: 0.6rem;
+            height: 100%;
+            font-size: 0.14rem;
+            margin: 0 0.1rem;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 0.4rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="navs">
+        <li class="item">标题一</li>
+        <li class="item">标题二</li>
+        <li class="item">标题三</li>
+        <li class="item">标题四</li>
+    </ul>
+</body>
+
+</html>
